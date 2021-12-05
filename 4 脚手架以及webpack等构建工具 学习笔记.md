@@ -713,13 +713,13 @@
     41. Tree Shaking
         1. 摇树 摇掉代码中未引用的代码
         2. 生产环境下自动启用
-        3. 加入optimization属性 
-           1. 开启usedExports 标记哪些函数未用
-           2. 开启minimize  摇掉未使用函数
+        3. 加入optimization属性
+            1. 开启usedExports 标记哪些函数未用
+            2. 开启minimize  摇掉未使用函数
     42. 合并模块
         1. concatenateModules
-           1. 尽可能将所有代码放在一个函数中
-           2. scope hoisting 作用域提升
+            1. 尽可能将所有代码放在一个函数中
+            2. scope hoisting 作用域提升
     43. TreeShaking和Babel
         1. 使用TreeShaking会使得Babel失效
         2. 由webpack使用时候 会用ESModule
@@ -760,52 +760,52 @@
         1. 开启缓存可能导致无法及时更新
         2. 需要添加hash值
         3. CompressionWebpackPlugin 插件 压缩
-           1. thread 文件大小
+            1. thread 文件大小
         4. 为打包文件 添加\[name].\[chunkHash] 也可以通过hash:3 去指定hash长度
 ##### 其他打包工具
 1. Rollup
-   1. ESModule打包器
-   2. 与webpack类似 小巧的多
-   3. HMR Rollup没法完全支持
-   4. 并不是为了竞争 只是为了充分利用ESModule特性高效打包
+    1. ESModule打包器
+    2. 与webpack类似 小巧的多
+    3. HMR Rollup没法完全支持
+    4. 并不是为了竞争 只是为了充分利用ESModule特性高效打包
 2. 快速上手
-   1. 安装 cli工具
-   2. --format 以什么格式 --file 导出文件
-   3. 只会保留用到的部分 默认就有TreeShaking
+    1. 安装 cli工具
+    2. --format 以什么格式 --file 导出文件
+    3. 只会保留用到的部分 默认就有TreeShaking
 3. 配置文件方式
-   1. rollup.config.js
-   2. 需要通过--config 去指定配置文件 默认不访问
+    1. rollup.config.js
+    2. 需要通过--config 去指定配置文件 默认不访问
 4. 使用插件
-   1. rollup-plugin-json 
-   2. json() 直接运行
+    1. rollup-plugin-json
+    2. json() 直接运行
 5. 加载npm 模块
-   1. rollup-plugin-node-resolve
-   2. 可以直接导入node_modules中的模块了
-   3. 也会被打包到bundle中 
+    1. rollup-plugin-node-resolve
+    2. 可以直接导入node_modules中的模块了
+    3. 也会被打包到bundle中
 6. 加载CommonJS
-   1. rollup-plugin-commonjs 插件
-   2. 用来转换CommonJS模块
+    1. rollup-plugin-commonjs 插件
+    2. 用来转换CommonJS模块
 7. 代码拆分
-   1. 动态导入
-   2. import{文件}.then({log// 解构出log方法}=>{})
-   3. 打包格式不能是IIFE 应该使用AMD标准 --format amd
-   4. 在配置中使用dir:'dist' 指定文件夹
+    1. 动态导入
+    2. import{文件}.then({log// 解构出log方法}=>{})
+    3. 打包格式不能是IIFE 应该使用AMD标准 --format amd
+    4. 在配置中使用dir:'dist' 指定文件夹
 8. 多入口打包
-   1. 将input属性使用数组形式
-   2. 而且需要将打包后的格式改为amd
-   3. 并加入dir
-   4. 引入require js
-   5. 通过data-main 选择需要引入的文件
+    1. 将input属性使用数组形式
+    2. 而且需要将打包后的格式改为amd
+    3. 并加入dir
+    4. 引入require js
+    5. 通过data-main 选择需要引入的文件
 9. 选用原则
-   1. rollup
-      1. 输出结果扁平
-      2. 打包结果可以正常阅读
-      3. 加载非ESModule比较麻烦
-      4. HMR比较麻烦
-   2. 开发应用程序 比较大 选用webpack
-   3. 开发类库或者框架 选用rollup
-   4. webpack大而全
-   5. rollup小而美
+    1. rollup
+        1. 输出结果扁平
+        2. 打包结果可以正常阅读
+        3. 加载非ESModule比较麻烦
+        4. HMR比较麻烦
+    2. 开发应用程序 比较大 选用webpack
+    3. 开发类库或者框架 选用rollup
+    4. webpack大而全
+    5. rollup小而美
 10. Parcel
     1. 零配置的前端打包器
     2. 命令行使用
@@ -815,13 +815,13 @@
     6. 下载parcel-bundle
     7. 支持动态导入方式 会自动拆分
     8. 生产模式
-       1. parcel build src/index.html
-       2. 多进程 同步工作
-       3. 自动安装插件
-       4. 构建速度快
-       5. 对比webpack 
-          1. 更好的生态
-          2. 找错误
+        1. parcel build src/index.html
+        2. 多进程 同步工作
+        3. 自动安装插件
+        4. 构建速度快
+        5. 对比webpack
+            1. 更好的生态
+            2. 找错误
 ### 规范化
 ####践行前端重要的部分
 > 为什么要有规范化的标准
@@ -839,40 +839,40 @@
 
 #### ESLint
 1. 介绍
-   1. 最为主流的lint工具 用来检测代码质量
-   2. 很容易统一开发者的编码风格
-   3. 可以帮助开发者提升编码能力
+    1. 最为主流的lint工具 用来检测代码质量
+    2. 很容易统一开发者的编码风格
+    3. 可以帮助开发者提升编码能力
 2. 安装
-   1. 初始化项目
-   2. 安装ESLint模块为开发依赖
-   3. 通过CLI命令校验安装结果
+    1. 初始化项目
+    2. 安装ESLint模块为开发依赖
+    3. 通过CLI命令校验安装结果
 3. 快速上手
-   1. 编写 问题 代码 检测下eslint是否工作
-   2. 使用eslint相关命令去检查
-   3. 完成eslint使用配置
-   4. 通过npm eslint --init 去初始化
+    1. 编写 问题 代码 检测下eslint是否工作
+    2. 使用eslint相关命令去检查
+    3. 完成eslint使用配置
+    4. 通过npm eslint --init 去初始化
 4. 配置文件解析
-   1. env用来解析运行在那个环境中
-   2. 在globals中将window document navigator选项设置了全局成员 值设为readonly 
-   3. extends 共享一些配置
-   4. parserOptions 使用es新特性 设置一些属性
-   5. rules 开启一些规则 属性值of warn error
+    1. env用来解析运行在那个环境中
+    2. 在globals中将window document navigator选项设置了全局成员 值设为readonly
+    3. extends 共享一些配置
+    4. parserOptions 使用es新特性 设置一些属性
+    5. rules 开启一些规则 属性值of warn error
 5. ESLint配置注释
-   1. 直接通过注释方式 去注入到代码中 从而不去校验某块代码
+    1. 直接通过注释方式 去注入到代码中 从而不去校验某块代码
 6. ESLint结合自动化工具
-   1. 集成后 一定会工作
-   2. 整合在一起 会更方便 与项目统一
-   3. 使用standard风格
+    1. 集成后 一定会工作
+    2. 整合在一起 会更方便 与项目统一
+    3. 使用standard风格
 7. 结合webpack
-   1. 安装对应模块
-   2. 安装eslint
-   3. 安装eslint-loader
-   4. 初始化.eslintrc.js配置文件
+    1. 安装对应模块
+    2. 安装eslint
+    3. 安装eslint-loader
+    4. 初始化.eslintrc.js配置文件
 8. 现代化项目继承ESLint
-   1. 现在的cli都已经继承了ESLint
+    1. 现在的cli都已经继承了ESLint
 9. ESLint检查TypeScript
-   1. 初始化Eslint
-   2. 通过自行配置去校验
+    1. 初始化Eslint
+    2. 通过自行配置去校验
 10. StyleLint认识
     1. 提供默认的代码检测
     2. 提供了CLi工具
@@ -897,26 +897,352 @@
 
 ####WebPack源码解析
 1. 打包后文件分析
-   1. 打包后的文件就是一个函数的自调用 当前函数传入一个对象
-   2. 这个对象我们为了方便将之成为模块定义 他就是一个键值对
-   3. 这个键名就是当前被加载模块的文件名和某个目录的拼接
-   4. 这个键值就是一个函数和node.js里的模块加载类似 会将被加载模块中的内容包裹在一个函数中
-   5. 这个函数在未来的某个时间点上会被调用 同时会接收到一定的参数 利用这些参数就可以实现模块的加载操作
-   6. 调用webpack require 方法去导入模块
-   7. 针对上述概念就是相当于将模块定义部分传给了modules
+    1. 打包后的文件就是一个函数的自调用 当前函数传入一个对象
+    2. 这个对象我们为了方便将之成为模块定义 他就是一个键值对
+    3. 这个键名就是当前被加载模块的文件名和某个目录的拼接
+    4. 这个键值就是一个函数和node.js里的模块加载类似 会将被加载模块中的内容包裹在一个函数中
+    5. 这个函数在未来的某个时间点上会被调用 同时会接收到一定的参数 利用这些参数就可以实现模块的加载操作
+    6. 调用webpack require 方法去导入模块
+    7. 针对上述概念就是相当于将模块定义部分传给了modules
 2. 单文件打包后源码调试
-   1. installModules是什么
-   2. webpack.require方法上挂载一些属性
-   3. m 用于存放modules
-   4. c 用于挂载缓存
-   5. d 挂载getter
-   6. r 挂载ESModule
-   7. p publicPath
-   8. s 赋值当前的文件路径 传入到我们的webpack.require 形参 moduleId
-   9. 用我们当前的moduleId作为键 挂载到installModules对象中
-      1. i:moduleId l:false exports:{}
-   10. 通过module\[moduleId].call 通过ID拿到函数去调用 
-       1. 值就是我们的模块定义函数
-       2. 如果需要递归就 可以通过exports往下传
-       3. 走完后 我们导出的 module.exports 就挂载上我们文件里面的导出内容
-
+    1. installModules是什么
+    2. webpack.require方法上挂载一些属性
+    3. m 用于存放modules
+    4. c 用于挂载缓存
+    5. d 挂载getter
+    6. r 挂载ESModule
+    7. p publicPath
+    8. s 赋值当前的文件路径 传入到我们的webpack.require 形参 moduleId
+    9. 用我们当前的moduleId作为键 挂载到installModules对象中
+        1. i:moduleId l:false exports:{}
+    10. 通过module\[moduleId].call 通过ID拿到函数去调用
+        1. 值就是我们的模块定义函数
+        2. 如果需要递归就 可以通过exports往下传
+        3. 走完后 我们导出的 module.exports 就挂载上我们文件里面的导出内容
+3. 功能函数说明
+    1. 还是传入了一个模块定义 不过这次打包两个文件 会生成两个键值对
+    2. 一个传入了webpack_require 因为需要递归处理
+    3. l标记为true 标识当前已经加载过了
+    4. \_\_webpack_require__
+        1. webpack自定义的一个加载方法 核心功能就是返回被加载模块中导出的内容
+        2. .m 将模块定义保存一份 挂载到自定义方法身上
+        3. .c 与m方法类似
+        4. .o 方法判断被传入的对象obj身上是否有指定的属性 有就是true
+        5. .d 方法 处理exports当前是否具备name属性 有的话 设置访问器 可枚举
+        6. .r 方法 通过是否存在Symbol判断当前环境是否属于ESModule
+            1. 加入Symbol.toStringTag方法
+            2. 不成立 也人为的添加上一个__esmodule属性
+        7. .t 方法 提供了四个开关
+            1. 调用t方法后我们会拿到被加载模块中的value
+            2. 对于value我们可能直接返回 也可能处理之后返回
+        8. .n 方法
+            1. 定义了getter 并返回了getter
+        9. .p方法 publicPath 值 会在这
+        10. .s 方法 接收我们模块定义中的键
+4. CommonJS模块打包
+    1. 尝试用自定义的require方法去加载内容 \_\_webpack_require__
+5. ESModuleJS模块打包
+    1. 先去找缓存找不到后就通过webpack的require方法导入并标记ESModule
+    2. 传递给n方法
+    3. n方法
+        1. 判断传进来的module身上有没有__module没有的话添加上
+        2. 然后调用d方法设置一个a属性 getter传出
+6. 功能函数手写实现
+    1. 定义对象用于将来缓存被加载的模块
+    2. 定义一个webpack require方法 来替换import require 加载操作
+        1. 判断当前缓存中是否存在要被加载的模块内容 如果存在则直接返回
+        2. 如果不存在我们需要自己定义{}加载被导入的模块内容
+        3. 调用当前moduleId对应的函数 然后完成内容加载
+        4. 当上述方法调用完成后 我们就可以修改l的值为true表示当前模块已经加载完成了
+        5. 加载工作完成后 要将拿回来的内容返回至调用的位置
+    3. 定义m属性用于保存modules
+    4. 定义c属性用来存储缓存
+    5. 定义o方法用来判断对象的身上是否存在指定的属性
+    6. 定义d方法用于在对象上添加指定的属性 同时给属性添加getter
+    7. 定义r方法用于标记当前模块时es6类型
+    8. 定义n方法用于设置具体的getter
+    9. 定义p属性用来保存资源访问路径
+    10. 调用webpack_require方法执行模块导入与加载操作
+7. 懒加载内容实现流程梳理
+    1. 调用e方法并在then回调中调用t方法
+    2. 运用JSONP去加载js 核心原理
+        1. 通过mode&1  7&1 成立 为true 0111 0001
+    3. t方法可以针对内容进行不同处理 取决于传入的数值 二进制
+8. t方法实现以及分析
+    1. 接收两个参数 value mode 第一个用来表示被加载模块ID 第二个是二进制数值
+    2. t方法内部做的第一件事 调用自定义的require方法加载value对应的模块内容导出 重新赋值给value
+    3. 当获取到了value值后 余下的2 4 8 ns 都是对当前的内容进行加工处理 然后返回使用
+    4. 当mode与上8 或者1成立时 直接返回value CommonJS
+    5. 如果1和4成立了 也会返回value 但是返回的是加工过的 esModuleJS
+    6. 如果上述条件不成立 还是要继续处理value 定义一个ns{}
+        1. 如果拿到的value是一个可以直接使用的内容 挂载到ns的default属性上
+9. 懒加载源码分析
+    1. 将import关键字替换为webpack_require方法
+    2. 通过 window\['webpackJSONP'] 调用webpack 的jsonp方法
+    3. 定义了webpackJsonpCallback方法
+    4. 定义了e方法
+    5. 创建promise数组 存放
+    6. 将文件内容通过append添加到head里面
+    7. 跳进t方法里面进行加载执行
+10. 懒加载手写实现
+    1. 定义变量存放数组
+        1. 查找window\[webpackJsonp] 查找是否有 有的话 就取用 没有就赋值\[]后取用
+        2. 重写了数组原生的push方法
+            1. webpackJsonpCallBack实现
+            2. 获取需要被动态加载的模块ID 参数1
+            3. 获取需要被动态加载的模块依赖对象 参数2
+            4. 循环判断chunkId里对应的模块内容是否已经完成了加载
+    2. 定义e方法
+        1. 实现jsonp来加载内容
+        2. 利用promise来实现异步加载操作
+        3. 主要实现
+            1. 定义一个数组用于存放promise
+            2. 获取chunkId对应的chunk是否已经完成了加载
+            3. 依据当前是否已经完成加载的状态来执行后续的逻辑
+            4. 定义jsonpScriptSrc实现
+                1. 创建script标签 创建scr标签  合并标签并写入到页面中
+11. webpack与tapAble
+    1. webpack编译流程
+        1. 配置初始化
+        2. 内容编译
+        3. 输出编译后的内容
+    2. 事件驱动型的事件工作流机制
+    3. tapAble是一个独立的库
+        1. 实例化hook的监听
+        2. 通过hook触发事件监听
+        3. 执行懒加载生成的可执行代码
+    4. hook本质就是tapAble中的实例对象
+        1. 执行特点
+        2. Hook：普通钩子 监听器之间互不干扰
+        3. BailHook：熔断钩子 某个监听返回非undefined时后续不执行
+        4. WaterfallHook：瀑布钩子 上一个监听的返回值可以传递给下一个
+        5. LoopHook：循环钩子 如果当前未返回false 则一直执行
+    5. tapAble同步钩子
+        1. 同步钩子
+            1. SyncHook
+            2. SyncBailHook
+            3. SyncWaterfallHook
+            4. SyncLoopHook
+        2. 异步串行钩子
+            1. AsyncSeriesHook
+            2. AsyncSeriesBailHook
+            3. AsyncSeriesWaterfallHook
+        3. 异步并行钩子
+            1. AsyncParallelHook
+            2. AsyncParallelBailHook
+12. 同步钩子使用以及测试
+    1. SyncHook
+        1. 导入我们想要的钩子类 通过new SyncHook生成钩子实例
+        2. 实例化实例
+        3. 添加事件监听 hook.tap定义钩子函数
+        4. 触发事件监听 hook.call执行钩子函数
+        5. 从上往下触发 高内聚低耦合
+    2. SyncBailHook
+        1. 与上面步骤保持一致
+        2. 如果某一个钩子函数中有返回了 则后面不会执行 熔断
+        3. 但是如果返回的是undefined则还会继续执行
+    3. SyncWaterfallHook
+        1. 与上面步骤保持一致
+        2. 返回值将会作为下一个钩子的参数
+    4. SyncLoopHook
+        1. 与上面步骤保持一致
+        2. do while循环 直到 钩子函数返回的是undefined的时候会跳过
+        3. 否则的话就一直执行钩子 从头开始  直到所有函数返回的都是undefined
+13. 异步钩子的使用
+    1. 对于异步钩子的使用 再添加事件监听时会存在三种方式
+        1. tap tapSync tapPromise
+    2. 异步并行钩子
+        1. AsyncParallelHook
+            1. 钩子函数的使用一样
+            2. 使用tapSync 并行处理
+        2. AsyncParallelBailHook
+    3. 异步串行钩子
+        1. AsyncSeriesHook
+        2. AsyncSeriesBailHook
+        3. AsyncSeriesWaterfallHook
+14. 实现SyncHook类
+    1. 新建一个类 继承于我们的Hook父类（新建我们的Hook父类）
+    2. Hook父类
+        1. constructor中 接收一个默认值为[]的args参数
+            1. this.args=args 赋值args
+            2. 定义taps 将来用于存放组装好的{}
+            3. 定义_x 默认值为undefined 将来在代码工厂函数中会给_x赋值
+        2. 创建tap方法
+            1. 通过options关键字接收信息
+                1. 对options做合并处理
+            2. 第二个参数接收fn
+            3. 调用_insert方法将组装好的options添加到[]中
+        3. 创建_insert方法
+            1. 调用tap方法并传入参数
+        4. 创建call方法
+            1. 创建将来要具体执行的函数代码结构
+            2. 调用_creatCall函数  通过 callFn.apply 将this传入进去
+        5. 创建_creatCall方法
+            1. 调用compile方法 应由我们的子类去实现
+            2. 传入参数  taps args
+    3. 子类实现compile方法
+        1. 调用工厂函数中的factory.setup(this,options)
+        2. 返回 factory.creat(options)
+    4. 定义HookCodeFactory类
+        1. 设置setup函数
+            1. 先准备后续需要使用到的数据
+        2. 设置create函数
+            1. 核心就是创建一段可以执行的代码体然后返回
+        3. 设置header函数 用于创建新函数时候 做拼接插入工作
+15. 实现AsyncParallelHook方法
+    1. 主要还是在父类Hook里面进行更改
+    2. 新增tapAsync
+16. 定位webpack打包入口
+    1. cmd文件的核心就是定位到具体文件
+    2. webpack下面的bin目录的cli文件
+    3. 拿到用户命令行信息
+    4. 拿到后去我们业务模块进行处理分发
+17. 编译主流程调试
+    1. compiler编译函数
+    2. 拿到options.plugins数组
+    3. 需要compiler具有读写之后 将plugin挂载
+    4. 重新赋值了plugin
+    5. 钩子函数
+        1. beforeRun
+        2. run
+        3. thisCompilation
+        4. compilation
+        5. beforeCompile
+        6. compile
+        7. make
+        8. afterMake
+18. 手写webpack 实现
+    1. 提供一个webpack变量是一个函数
+        1. 接受两个参数 options callBack（暂时不处理）
+    2. 实例化compiler
+        1. 新建一个compiler类 并作初始化
+        2. 将options挂载到compiler实例对象上
+        3. 需要安装tapAble库 去实现钩子 版本1 有tapAble模块 2里面没有
+        4. 通过compiler继承 tapAble
+        5. 定义run方法
+            1. 参数为callback
+            2. 回调里面 第一个是null 第二个是个对象
+            3. 对象里面有个toJson函数 返回一个对象
+                1. entries当前次打包的入口信息
+                2. 当前次打包的chunk信息
+                3. 模块信息
+                4. 当前次打包生成的最终资源
+    3. 初始化nodeEnvironmentPlugin 具备文件读写能力
+        1. 新建一个NodeEnvironmentPlugin类
+        2. 接收options并保存到当前类身上
+    4. 挂载所有的plugins至compiler对象身上
+        1. 将options上的plugins挂载到compiler身上
+        2. 通过插件身上的apply方法 调用plugin.apply(compiler)
+    5. 挂载所有的webpack内置的插件（入口）
+    6. 返回compiler实例对象
+19. EntryOptionPlugin分析
+    1. 有一个apply方法
+    2. 调用compiler.hooks.entryOption.tap 注册了监听
+    3. 在new完entryOptionPlugin时候就调用了
+    4. itemToPlugin 是一个函数 接收三个参数 context item main
+    5. SingleEntryPlugin
+        1. 在调用itemToPlugin的时候返回一个对象
+        2. 有一个构造函数 负责接收上下文中的context entry name
+        3. compilation钩子监听
+        4. make钩子监听
+20. EntryOptionPlugin手写
+    1. 新建webpackOptionApply 类
+        1. 创建process方法
+        2. 接收两个形参  options compiler
+        3. 调用实例new EntryOptionPlugin.apply(compiler) 方法
+    2. 新建entryOptionPlugin类
+        1. 创建apply方法
+        2. 调用 compiler.hooks.tap方法
+        3. 调用itemToPlugin方法
+    3. 新建SingleEntryPlugin类
+        1. 初始化apply方法并添加钩子 compiler.hooks.make.tapAsync
+    4. 挂载webpackPlugin 内置入口
+21. run方法的流程以及实现
+    1. 先定义finalCallBack函数
+    2. 定义onCompiled函数
+22. compile实现及分析
+    1. newCompilationParams方法调用 返回了params normalModuleFactory
+    2. 上述操作为了获取到params
+    3. 接着调用beforeCompile钩子监听 在他的回调中触发了compile监听
+    4. 调用了newCompilation方法传入了params  并返回了 compilation
+    5. 调用了createNewCompilation
+    6. 上述操作完成后就可以触发我们的make钩子监听
+23. make流程回顾
+    1. 实例化compiler对象（会贯穿工作的整个流程）
+    2. 由compiler调用run方法
+    3. compiler实例化操作
+        1. compiler继承tapAble 因此具备了钩子的能力
+        2. 在实例化compiler对象之后就往他的身上挂载了很多属性 其中NodeEnvironmentPlugin这个操作就让他具备了文件读写的能力（我们自己写时候用的是node的fs模块）
+        3. 具备了fs操作能力之后 又将plugins中的插件挂载到compiler对象身上
+        4. 将内部默认的插件于compiler建立关系 其中EntryOptionPlugin处理了入口模块的ID
+        5. 在实例化Compiler的时候只是监听了make钩子 SingleEntryPlugin
+            1. 在SingleEntryPlugin模块的apply方法中由两个钩子监听
+            2. 其中compilation钩子就是让compilation具备了利用normalModuleFactory工厂创建一个普通模块的能力
+            3. 因为他就是利用一个自己创建的模块来加载需要被打包的模块
+            4. addEntry方法调用
+        6. run方法执行
+            1. run 方法里就是一堆钩子按着顺序触发
+            2. compile方法执行
+                1. 准备参数
+                2. 触发钩子beforeCompile
+                3. 将第一步的参数传给一个函数 开始创建一个compilation
+                4. 调用newCompilation内部
+                    1. 调用了creatCompilation
+                    2. 触发了this.compilation钩子和compilation钩子的监听
+            3. 当创建了compilation对象后就触发了make钩子
+            4. 当我们触发了make钩子监听的时候 将compilation对象传递了过去
+24. addEntry流程分析
+    1. make钩子在被触发的时候接受了一个compilation对象实例 他身上挂载了很多属性
+    2. 从compilation身上解构出三个值
+        1. entry 当前需要被打包的模块的相对路径
+        2. name main
+        3. context 当前项目根路径
+    3. dep是当前入口模块中的依赖关系进行处理
+    4. 调用了addEntry
+    5. 在compilation的实例身上有个addEntry 然后内部调用了_addModuleChain方法 去处理依赖
+    6. 在compilation中我们通过NormalModuleFactory工厂来创建一个普通的模块对象
+    7. 在webpack内部默认开启了一个100并发量的打包操作 当前我们看到的normalModule.create()
+    8. 在beforeResolve里面会触发一个factory钩子监听（这个部分其实是处理loader）
+    9. 上述流程完成之后获取一个函数被存在factory里面 然后对他进行调用
+    10. 在这个函数调用里又触发了一个叫resolver的钩子（处理loader的 拿到了resolver意味着所有loader都处理完毕）
+    11. 调用resolver方法后 就会进入afterResolve这个钩子里面 触发 new NormalModule
+    12. 在完成上述操作后就将module进行了保存和一些其他属性的添加
+    13. 调用build方法开始编译
+25. addEntry初始化
+    1. 使用compilation.addEntry 所有需要先创建compilation类
+    2. addEntry
+        1. context
+        2. entry
+        3. name
+        4. callBack
+26. _addModuleChain方法实现
+    1. context
+    2. entry
+    3. name
+    4. callBack
+    5. 调用normalModuleFactory.create
+27. buildModule实现
+    1. 定义方法
+    2. 需要接收两个参数
+        1. Module 需要操作模块
+        2. callback 回调
+    3. 调用module.build方法
+        1. 方法在NormalModule中进行声明定义
+        2. 有两个参数compilation和callback
+    4. doBuild方法 语法树处理
+28. build以及parse实现
+    1. 引入babylon
+    2. 将parse类继承于tapAble类
+    3. 并返回babylon.parse
+    4. 新建stats函数
+        1. 设置toJson方法
+29. 依赖模块处理
+    1. 从文件中读取相关module通过相关loader转为ast语法树
+    2. 导入 babel traverse 遍历ast语法树做相关处理
+    3. 导入 babel generator 作语法树的翻译
+30. 最终生成重要步骤
+    1. chunks
+        1. 在make钩子触发时 去处理chunk并写入到指定的文件
+        2. 然后输出到dist目录
+        3. 通过compilation.seal方法
+    2. assets
